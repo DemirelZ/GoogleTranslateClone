@@ -5,7 +5,7 @@ import { getLanguages, translateText } from "./redux/actions/translateAction";
 import Select from "react-select";
 import { useState, useMemo } from "react";
 import { clearAnswer } from "./redux/slices/tranlateSlice";
-import { FaExchangeAlt } from 'react-icons/fa';
+import { FaExchangeAlt } from "react-icons/fa";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -43,11 +43,9 @@ const App = () => {
     <div id="main-page">
       <div className="container">
         <div className="head">
-          <img  src="/logo.png" alt="" />
+          <img src="/logo.png" alt="" />
           <h1>Google Translate Clone</h1>
         </div>
-
-        {/* üst kısım */}
         <div className="upper">
           <Select
             isLoading={state.isLoading}
@@ -57,7 +55,9 @@ const App = () => {
             className="select"
             options={refinedData}
           />
-          <button onClick={handleSwap}><FaExchangeAlt/></button>
+          <button onClick={handleSwap}>
+            <FaExchangeAlt />
+          </button>
           <Select
             onChange={setTargetLang}
             value={targetLang}
